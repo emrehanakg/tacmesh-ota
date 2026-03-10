@@ -1,12 +1,58 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- |
+# TacMesh OTA System
 
-# Simple OTA example
+ESP32-C6 üzerinde çalışan WiFi tabanlı OTA (Over-The-Air) güncelleme sistemi.
 
-This example is based on `esp_https_ota` component's APIs.
+## Özellikler
+- Otomatik firmware güncelleme (30 saniyede bir kontrol)
+- Versiyon kontrolü (aynı versiyonu tekrar indirmiyor)
+- Rollback desteği (hatalı firmware'de eski versiyona döner)
+- SHA-256 hash doğrulama
+- Node.js backend + taktik C2 dashboard
 
-## Configuration
+## Kurulum
 
-Refer README.md in the parent directory for setup details.
+### Gereksinimler
+- ESP-IDF v5.5+
+- Node.js v20+
+- ESP32-C6 DevKitC
 
-Example also supports binding to specific interface (either "Ethernet" or "WiFi Station"), which will allow firmware upgrade to happen through specific interface (in case multiple networking interfaces are enabled). Please see more on this through example configuration in `idf.py menuconfig -> Example Configuration -> Support firmware upgrade bind specified interface->Choose OTA data bind interface`.
+### 1. Sunucuyu Başlat
+```bash
+cd server
+npm install
+node server.js
+```
+Dashboard: http://localhost:3000
+
+### 2. Firmware Ayarları
+`main/simple_ota_example.c` dosyasında:
+```c
+#define OTA_SERVER_IP    "192.168.0.16"  // Mac IP'n
+#define FIRMWARE_VERSION "1.0.0"         // Mevcut versiyon
+#define DEVICE_ID        "esp32c6-node-01"
+```
+
+### 3. Derle ve Flash'a Yaz
+```bash
+idf.py set-target esp32c6
+idf.py menuconfig  # WiFi SSID ve şifreyi gir
+idf.py build
+idf.py -p /dev/cu.usbserial-10 flash monitor
+```
+
+## Kullanım
+1. Sunucuyu başlat
+2. Dashboard'dan yeni firmware yükle
+3. Versiyon adını gir ve aktifleştir
+4. ESP32 otomatik olarak güncellenir
+
+## Proje Yapısı
+```
+├── main/
+│   └── simple_ota_example.c  # ESP32 firmware
+├── server/
+│   ├── server.js             # Node.js backend
+│   └── public/
+│       └── index.html        # Dashboard
+└── README.md
+```
