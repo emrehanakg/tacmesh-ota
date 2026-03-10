@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/akgun/esp/ota_project/simple_ota_example/build/CMakeFiles/bootloader
+/Users/akgun/esp/ota_project/simple_ota_example/build/CMakeFiles/bootloader.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/CMakeFiles/bootloader-complete.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

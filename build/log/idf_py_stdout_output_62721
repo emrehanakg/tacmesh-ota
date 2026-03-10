@@ -1,0 +1,86 @@
+Command: ninja flash
+[1/5] cd /Users/akgun/esp/ota_project/simple_ota_example/build/esp-idf/esptool_py && /Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/akgun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/akgun/esp/ota_project/simple_ota_example/build/partition_table/partition-table.bin /Users/akgun/esp/ota_project/simple_ota_example/build/simple_ota.bin
+simple_ota.bin binary size 0x103d10 bytes. Smallest app partition is 0x1a9000 bytes. 0xa52f0 bytes (39%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/akgun/esp/ota_project/simple_ota_example/build/bootloader/esp-idf/esptool_py && /Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/akgun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/akgun/esp/ota_project/simple_ota_example/build/bootloader/bootloader.bin
+Bootloader binary size 0x57b0 bytes. 0x2850 bytes (31%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/akgun/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/akgun/esp/esp-idf -D "SERIAL_TOOL=/Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python;;/Users/akgun/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/akgun/esp/ota_project/simple_ota_example/build -P /Users/akgun/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/cu.usbserial-10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x20000 simple_ota.bin 0x8000 partition_table/partition-table.bin 0xf000 ota_data_initial.bin
+esptool.py v4.12.dev1
+Serial port /dev/cu.usbserial-10
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.0)
+Features: Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz, Unknown Embedded Flash
+Crystal is 40MHz
+MAC: 60:55:f9:00:00:f6:9f:cc
+BASE MAC: 60:55:f9:f6:9f:cc
+MAC_EXT: 00:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00020000 to 0x00123fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000f000 to 0x00010fff...
+SHA digest in image updated
+Compressed 22448 bytes to 13980...
+Writing at 0x00000000... (100 %)
+Wrote 22448 bytes (13980 compressed) at 0x00000000 in 0.7 seconds (effective 254.0 kbit/s)...
+Hash of data verified.
+Compressed 1064208 bytes to 616182...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002cb18... (5 %)
+Writing at 0x0003755e... (7 %)
+Writing at 0x0003d64b... (10 %)
+Writing at 0x00046c07... (13 %)
+Writing at 0x0004df5d... (15 %)
+Writing at 0x00054ce8... (18 %)
+Writing at 0x0005c8de... (21 %)
+Writing at 0x00063bf8... (23 %)
+Writing at 0x0006ae9b... (26 %)
+Writing at 0x00071c37... (28 %)
+Writing at 0x00078310... (31 %)
+Writing at 0x0007ebd6... (34 %)
+Writing at 0x00085838... (36 %)
+Writing at 0x0008bc27... (39 %)
+Writing at 0x00092433... (42 %)
+Writing at 0x00098487... (44 %)
+Writing at 0x0009dd92... (47 %)
+Writing at 0x000a4229... (50 %)
+Writing at 0x000aa817... (52 %)
+Writing at 0x000b0756... (55 %)
+Writing at 0x000b67ae... (57 %)
+Writing at 0x000bc791... (60 %)
+Writing at 0x000c2899... (63 %)
+Writing at 0x000c8d77... (65 %)
+Writing at 0x000cfc49... (68 %)
+Writing at 0x000d7014... (71 %)
+Writing at 0x000de125... (73 %)
+Writing at 0x000e5392... (76 %)
+Writing at 0x000ec440... (78 %)
+Writing at 0x000f25c2... (81 %)
+Writing at 0x000f8bb0... (84 %)
+Writing at 0x000fedc3... (86 %)
+Writing at 0x00104c4b... (89 %)
+Writing at 0x0010b915... (92 %)
+Writing at 0x001128c2... (94 %)
+Writing at 0x00118174... (97 %)
+Writing at 0x0011dfc1... (100 %)
+Wrote 1064208 bytes (616182 compressed) at 0x00020000 in 15.9 seconds (effective 535.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 129...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (129 compressed) at 0x00008000 in 0.1 seconds (effective 219.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000f000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000f000 in 0.1 seconds (effective 464.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

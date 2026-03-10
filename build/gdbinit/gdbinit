@@ -1,0 +1,2 @@
+source /Users/akgun/esp/ota_project/simple_ota_example/build/gdbinit/symbols
+source /Users/akgun/esp/ota_project/simple_ota_example/build/gdbinit/connect

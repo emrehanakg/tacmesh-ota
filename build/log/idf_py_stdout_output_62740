@@ -1,0 +1,1803 @@
+Command: /Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/akgun/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-10 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/akgun/esp/ota_project/simple_ota_example/build/simple_ota.elf /Users/akgun/esp/ota_project/simple_ota_example/build/bootloader/bootloader.elf -m '/Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/akgun/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-10'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (24) boot: efuse block revision: v0.0[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (65) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (71) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (78) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (279) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) load[0m
+[0;32mI (297) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (308) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (308) boot: Disabling RNG early entropy source...[0m
+[0;32mI (319) cpu_start: Unicore app[0m
+[0;32mI (328) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (330) app_init: Application information:[0m
+[0;32mI (334) app_init: Project name:     simple_ota[0m
+[0;32mI (338) app_init: App version:      1[0m
+[0;32mI (341) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (347) app_init: ELF file SHA256:  5e6d73acb...[0m
+[0;32mI (351) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (355) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (358) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (362) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (366) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (373) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (378) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (383) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (389) spi_flash: detected chip: gd[0m
+[0;32mI (392) spi_flash: flash io: dio[0m
+[0;33mW (395) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (407) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (413) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (420) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (424) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (428) main_task: Started on CPU0[0m
+[0;32mI (438) main_task: Calling app_main()[0m
+[0;32mI (438) TACMESH_OTA: ╔═══════════════════════════╗[0m
+[0;32mI (438) TACMESH_OTA: ║  TacMesh OTA Node         ║[0m
+[0;32mI (448) TACMESH_OTA: ║  Versiyon: 1.0.0          ║[0m
+[0;32mI (448) TACMESH_OTA: ║  Cihaz ID: esp32c6-node-01 ║[0m
+[0;32mI (458) TACMESH_OTA: ╚═══════════════════════════╝[0m
+[0;32mI (468) TACMESH_OTA: ✓ Çalışan firmware zaten doğrulanmış.[0m
+[0;32mI (468) example_connect: Start example_connect.[0m
+[0;32mI (478) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (478) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (488) wifi:wifi driver task: 4082a3b0, prio:23, stack:6656, core=0[0m
+[0;32mI (488) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (488) wifi:wifi certification version: v7.0[0m
+[0;32mI (498) wifi:config NVS flash: enabled[0m
+[0;32mI (498) wifi:config nano formatting: disabled[0m
+[0;32mI (498) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (508) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (518) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (518) wifi:Init management short buffer num: 32[0m
+[0;32mI (518) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (528) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (528) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (538) wifi:Init static rx buffer num: 10[0m
+[0;32mI (538) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (548) wifi_init: rx ba win: 6[0m
+[0;32mI (548) wifi_init: accept mbox: 6[0m
+[0;32mI (548) wifi_init: tcpip mbox: 32[0m
+[0;32mI (548) wifi_init: udp mbox: 6[0m
+[0;32mI (558) wifi_init: tcp mbox: 6[0m
+[0;32mI (558) wifi_init: tcp tx win: 5760[0m
+[0;32mI (558) wifi_init: tcp rx win: 5760[0m
+[0;32mI (568) wifi_init: tcp mss: 1440[0m
+[0;32mI (568) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (568) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (578) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (578) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (618) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (618) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (628) wifi:(agc)0x600a7128:0xd20659e8, min.avgNF:0xce->0xd2(dB), RCalCount:0x65, min.RRssi:0x9e8(-97.50)[0m
+[0;32mI (638) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (648) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (648) wifi:enable tsf[0m
+[0;32mI (648) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (658) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (668) example_connect: Waiting for IP(s)[0m
+[0;32mI (3238) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3238) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3238) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3248) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3268) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3268) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3278) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3278) wifi:(trc)phytype:CBW20-SGI, snr:50, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3288) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3298) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:50, ampduState:wait operational[0m
+[0;32mI (3308) wifi:ifidx:0, rssi:-47, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3318) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3348) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (3358) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (3358) wifi:[ADDBA]RX DELBA, reason:39, delete tid:5, initiator:0(recipient)[0m
+[0;32mI (3358) wifi:[ADDBA]RX DELBA, reason:39, delete tid:7, initiator:0(recipient)[0m
+[0;32mI (3478) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3478) wifi:security: WPA2-PSK, phy:bgn, rssi:-47, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3488) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3488) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3498) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3508) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3518) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3528) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3538) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3548) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3568) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3578) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3588) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5468) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5778) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (5778) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (5778) example_common: Connected to example_netif_sta[0m
+[0;32mI (5788) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (5788) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5798) TACMESH_OTA: ✓ WiFi bağlandı[0m
+[0;32mI (5808) TACMESH_OTA: OTA görev başladı. Her 30 saniyede kontrol...[0m
+[0;32mI (5808) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (5818) TACMESH_OTA:  OTA Güncelleme Başlıyor...[0m
+[0;32mI (5828) TACMESH_OTA:  Mevcut versiyon: 1.0.0[0m
+[0;32mI (5828) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (5838) main_task: Returned from app_main()[0m
+[0;33mW (5918) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:3, win:64, cur_ssn:3), CONF:0xc0000005[0m
+[0;32mI (5928) TACMESH_OTA: Sunucu versiyonu: v1.0.0 [0m
+[0;32mI (5928) TACMESH_OTA: Yeni versiyon mevcut: 1.0.0 → v1.0.0 [0m
+[0;32mI (5928) TACMESH_OTA: Çalışan partition: ota_0 (offset: 0x00020000)[0m
+[0;32mI (5938) TACMESH_OTA: Hedef partition: ota_1 (offset: 0x001d0000)[0m
+[0;32mI (5978) TACMESH_OTA: Durum bildirimi gönderildi: ota_start[0m
+[0;32mI (5998) esp_https_ota: Starting OTA...[0m
+[0;32mI (5998) esp_https_ota: Writing to <ota_1> partition at offset 0x1d0000[0m
+[0;32mI (7328) TACMESH_OTA: İndirme: 10% (106496/1060816 bytes)[0m
+[0;32mI (9118) TACMESH_OTA: İndirme: 20% (212992/1060816 bytes)[0m
+[0;32mI (10968) TACMESH_OTA: İndirme: 30% (318464/1060816 bytes)[0m
+[0;32mI (12538) TACMESH_OTA: İndirme: 40% (424960/1060816 bytes)[0m
+[0;32mI (14048) TACMESH_OTA: İndirme: 50% (530432/1060816 bytes)[0m
+[0;32mI (15618) TACMESH_OTA: İndirme: 60% (636928/1060816 bytes)[0m
+[0;32mI (17538) TACMESH_OTA: İndirme: 70% (743424/1060816 bytes)[0m
+[0;32mI (19158) TACMESH_OTA: İndirme: 80% (848896/1060816 bytes)[0m
+[0;32mI (20718) TACMESH_OTA: İndirme: 90% (955392/1060816 bytes)[0m
+[0;32mI (22458) TACMESH_OTA: İndirme: 100% (1060816/1060816 bytes)[0m
+[0;32mI (22458) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22478) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22478) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (22578) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (22588) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (22588) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22618) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22618) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (22718) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (22728) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (22768) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (22768) TACMESH_OTA:  ✓ OTA BAŞARILI![0m
+[0;32mI (22768) TACMESH_OTA:  5 saniye sonra yeniden başlıyor...[0m
+[0;32mI (22768) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (22808) TACMESH_OTA: Durum bildirimi gönderildi: ota_success[0m
+[0;32mI (27808) wifi:state: run -> init (0x0)[0m
+[0;32mI (27808) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (27808) wifi:pm stop, total sleep time: 7167761 us / 24305537 us[0m
+
+[0;32mI (27808) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (27808) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (27818) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (27828) wifi:flush txq[0m
+[0;32mI (27828) wifi:stop sw txq[0m
+[0;32mI (27828) wifi:lmac stop hw txq[0m
+[0;32mI (27828) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x1d0000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (536) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (563) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (586) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (886) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:(agc)0x600a7128:0xd20789de, min.avgNF:0xce->0xd2(dB), RCalCount:0x78, min.RRssi:0x9de(-98.12)[0m
+[0;32mI (906) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (916) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (916) wifi:enable tsf[0m
+[0;32mI (916) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (926) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (936) example_connect: Waiting for IP(s)[0m
+[0;32mI (3506) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3506) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3506) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3516) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3556) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3556) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3556) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3566) wifi:(trc)phytype:CBW20-SGI, snr:52, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3566) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3576) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:52, ampduState:wait operational[0m
+[0;32mI (3586) wifi:ifidx:0, rssi:-45, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3596) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3746) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3746) wifi:security: WPA2-PSK, phy:bgn, rssi:-45, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3746) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3756) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3766) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3776) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3786) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3796) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3806) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3816) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3846) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3856) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3866) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8956) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (8956) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (8956) example_common: Connected to example_netif_sta[0m
+[0;32mI (8966) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (8966) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8976) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (8986) simple_ota_example: Starting OTA example task[0m
+[0;32mI (8986) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (8996) main_task: Returned from app_main()[0m
+[0;33mW (9086) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:3, win:64, cur_ssn:3), CONF:0xc0000005[0m
+[0;32mI (9116) esp_https_ota: Starting OTA...[0m
+[0;32mI (9116) esp_https_ota: Writing to <ota_0> partition at offset 0x20000[0m
+[0;32mI (25226) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (25246) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (25246) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (25346) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (25356) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (25356) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (25376) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (25386) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (25476) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (25486) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (25536) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (25536) wifi:state: run -> init (0x0)[0m
+[0;32mI (25536) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (25536) wifi:pm stop, total sleep time: 4087961 us / 21769093 us[0m
+
+[0;32mI (25536) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (25546) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (25556) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (25556) wifi:flush txq[0m
+[0;32mI (25556) wifi:stop sw txq[0m
+[0;32mI (25556) wifi:lmac stop hw txq[0m
+[0;32mI (25566) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (536) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (562) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (586) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (886) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:(agc)0x600a7128:0xd21319f0, min.avgNF:0xce->0xd2(dB), RCalCount:0x131, min.RRssi:0x9f0(-97.00)[0m
+[0;32mI (906) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (916) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (916) wifi:enable tsf[0m
+[0;32mI (916) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (926) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (936) example_connect: Waiting for IP(s)[0m
+[0;32mI (3506) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3506) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3506) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3516) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3536) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3536) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3546) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3546) wifi:(trc)phytype:CBW20-SGI, snr:53, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3556) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3566) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:53, ampduState:wait operational[0m
+[0;32mI (3576) wifi:ifidx:0, rssi:-44, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3586) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3746) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3746) wifi:security: WPA2-PSK, phy:bgn, rssi:-44, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3756) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3756) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3776) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3776) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3786) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3796) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3806) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3816) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3836) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3866) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3876) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7536) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7536) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7536) example_common: Connected to example_netif_sta[0m
+[0;32mI (7546) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7546) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7556) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (7566) simple_ota_example: Starting OTA example task[0m
+[0;32mI (7566) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (7576) main_task: Returned from app_main()[0m
+[0;33mW (7686) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:3, win:64, cur_ssn:3), CONF:0xc0000005[0m
+[0;32mI (7696) esp_https_ota: Starting OTA...[0m
+[0;32mI (7696) esp_https_ota: Writing to <ota_1> partition at offset 0x1d0000[0m
+[0;32mI (22836) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22856) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22856) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (22956) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (22966) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (22966) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22986) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22996) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (23086) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (23096) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (23146) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (23146) wifi:state: run -> init (0x0)[0m
+[0;32mI (23146) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (23146) wifi:pm stop, total sleep time: 2758665 us / 19373414 us[0m
+
+[0;32mI (23146) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (23156) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (23166) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (23166) wifi:flush txq[0m
+[0;32mI (23166) wifi:stop sw txq[0m
+[0;32mI (23166) wifi:lmac stop hw txq[0m
+[0;32mI (23176) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x1d0000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (536) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (563) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (586) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (886) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:(agc)0x600a7128:0xd203ba12, min.avgNF:0xce->0xd2(dB), RCalCount:0x3b, min.RRssi:0xa12(-94.88)[0m
+[0;32mI (906) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (916) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (916) wifi:enable tsf[0m
+[0;32mI (916) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (926) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (936) example_connect: Waiting for IP(s)[0m
+[0;32mI (3506) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3506) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3506) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3516) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3536) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3536) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3546) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3556) wifi:(trc)phytype:CBW20-SGI, snr:52, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3556) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3566) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:52, ampduState:wait operational[0m
+[0;32mI (3576) wifi:ifidx:0, rssi:-45, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3586) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3746) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3746) wifi:security: WPA2-PSK, phy:bgn, rssi:-45, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3756) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3756) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3766) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3776) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3786) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3796) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3806) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3816) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3846) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3856) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3866) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7486) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7486) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7486) example_common: Connected to example_netif_sta[0m
+[0;32mI (7496) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7496) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7506) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (7516) simple_ota_example: Starting OTA example task[0m
+[0;32mI (7516) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (7526) main_task: Returned from app_main()[0m
+[0;33mW (8856) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:4, win:64, cur_ssn:4), CONF:0xc0000005[0m
+[0;32mI (8866) esp_https_ota: Starting OTA...[0m
+[0;32mI (8876) esp_https_ota: Writing to <ota_0> partition at offset 0x20000[0m
+[0;32mI (24406) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (24426) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (24426) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (24526) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (24536) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (24536) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (24556) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (24566) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (24656) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (24666) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (24716) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (24716) wifi:state: run -> init (0x0)[0m
+[0;32mI (24716) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (24716) wifi:pm stop, total sleep time: 2736830 us / 20946864 us[0m
+
+[0;32mI (24716) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (24726) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (24736) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (24736) wifi:flush txq[0m
+[0;32mI (24736) wifi:stop sw txq[0m
+[0;32mI (24736) wifi:lmac stop hw txq[0m
+[0;32mI (24746) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (535) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (562) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (585) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (896) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:(agc)0x600a7128:0xd217aa12, min.avgNF:0xce->0xd2(dB), RCalCount:0x17a, min.RRssi:0xa12(-94.88)[0m
+[0;32mI (906) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (916) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (916) wifi:enable tsf[0m
+[0;32mI (916) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (926) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (936) example_connect: Waiting for IP(s)[0m
+[0;32mI (3506) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3506) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3506) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3516) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3546) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3546) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3546) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3556) wifi:(trc)phytype:CBW20-SGI, snr:55, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3556) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3566) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:55, ampduState:wait operational[0m
+[0;32mI (3576) wifi:ifidx:0, rssi:-42, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3586) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3746) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3746) wifi:security: WPA2-PSK, phy:bgn, rssi:-42, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3756) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3756) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3776) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3776) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3786) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3796) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3806) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3836) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3846) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3866) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3876) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7506) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7506) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7506) example_common: Connected to example_netif_sta[0m
+[0;32mI (7516) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7516) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7526) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (7536) simple_ota_example: Starting OTA example task[0m
+[0;32mI (7536) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (7546) main_task: Returned from app_main()[0m
+[0;33mW (7646) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:3, win:64, cur_ssn:3), CONF:0xc0000005[0m
+[0;32mI (7676) esp_https_ota: Starting OTA...[0m
+[0;32mI (7676) esp_https_ota: Writing to <ota_1> partition at offset 0x1d0000[0m
+[0;32mI (22496) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22516) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22516) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (22616) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (22626) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (22626) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22646) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22656) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (22746) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (22756) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (22806) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (22806) wifi:state: run -> init (0x0)[0m
+[0;32mI (22806) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (22806) wifi:pm stop, total sleep time: 2686895 us / 19033151 us[0m
+
+[0;32mI (22806) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (22816) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (22826) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (22826) wifi:flush txq[0m
+[0;32mI (22826) wifi:stop sw txq[0m
+[0;32mI (22826) wifi:lmac stop hw txq[0m
+[0;32mI (22836) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x1d0000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (536) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (563) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (586) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (886) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:(agc)0x600a7128:0xd21c59f2, min.avgNF:0xce->0xd2(dB), RCalCount:0x1c5, min.RRssi:0x9f2(-96.88)[0m
+[0;32mI (906) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (916) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (916) wifi:enable tsf[0m
+[0;32mI (916) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (926) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (936) example_connect: Waiting for IP(s)[0m
+[0;32mI (3506) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3506) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3506) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3516) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3546) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3546) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3546) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3556) wifi:(trc)phytype:CBW20-SGI, snr:56, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3556) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3566) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:56, ampduState:wait operational[0m
+[0;32mI (3576) wifi:ifidx:0, rssi:-41, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3586) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3746) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3746) wifi:security: WPA2-PSK, phy:bgn, rssi:-41, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3746) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3756) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3766) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3776) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3786) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3796) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3806) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3826) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3856) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3866) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3936) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7486) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7486) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7486) example_common: Connected to example_netif_sta[0m
+[0;32mI (7496) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7496) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7506) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (7516) simple_ota_example: Starting OTA example task[0m
+[0;32mI (7516) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (7526) main_task: Returned from app_main()[0m
+[0;33mW (7636) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:4, win:64, cur_ssn:4), CONF:0xc0000005[0m
+[0;32mI (7646) esp_https_ota: Starting OTA...[0m
+[0;32mI (7646) esp_https_ota: Writing to <ota_0> partition at offset 0x20000[0m
+[0;32mI (23836) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (23856) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (23856) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (23956) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (23966) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (23966) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (23986) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (23996) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (24086) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (24096) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (24156) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (24156) wifi:state: run -> init (0x0)[0m
+[0;32mI (24156) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (24156) wifi:pm stop, total sleep time: 2730601 us / 20389620 us[0m
+
+[0;32mI (24156) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (24166) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (24176) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (24176) wifi:flush txq[0m
+[0;32mI (24176) wifi:stop sw txq[0m
+[0;32mI (24176) wifi:lmac stop hw txq[0m
+[0;32mI (24186) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00048ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=0010b838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=0011f624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (536) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (562) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (586) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (886) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (896) wifi:(agc)0x600a7128:0xd20e79d8, min.avgNF:0xce->0xd2(dB), RCalCount:0xe7, min.RRssi:0x9d8(-98.50)[0m
+[0;32mI (906) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (916) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (916) wifi:enable tsf[0m
+[0;32mI (916) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (926) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (936) example_connect: Waiting for IP(s)[0m
+[0;32mI (3506) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3506) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3506) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3516) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3546) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3546) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3546) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3556) wifi:(trc)phytype:CBW20-SGI, snr:56, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3556) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3566) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:56, ampduState:wait operational[0m
+[0;32mI (3576) wifi:ifidx:0, rssi:-41, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3586) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3746) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3746) wifi:security: WPA2-PSK, phy:bgn, rssi:-41, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3756) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3756) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3766) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3776) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3786) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3796) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3806) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3816) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3856) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3856) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3866) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7556) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7556) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7556) example_common: Connected to example_netif_sta[0m
+[0;32mI (7566) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7566) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7576) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (7586) simple_ota_example: Starting OTA example task[0m
+[0;32mI (7586) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (7596) main_task: Returned from app_main()[0m
+[0;33mW (7696) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:3, win:64, cur_ssn:3), CONF:0xc0000005[0m
+[0;32mI (7726) esp_https_ota: Starting OTA...[0m
+[0;32mI (7726) esp_https_ota: Writing to <ota_1> partition at offset 0x1d0000[0m
+[0;32mI (22836) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22856) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22856) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (22956) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (22966) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (22966) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (22986) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) [0m
+[0;32mI (22996) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (23086) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) [0m
+[0;32mI (23096) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (23146) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (23146) wifi:state: run -> init (0x0)[0m
+[0;32mI (23146) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (23146) wifi:pm stop, total sleep time: 2870212 us / 19376444 us[0m
+
+[0;32mI (23146) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (23156) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (23166) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (23166) wifi:flush txq[0m
+[0;32mI (23166) wifi:stop sw txq[0m
+[0;32mI (23166) wifi:lmac stop hw txq[0m
+[0;32mI (23176) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=28fc8h (167880) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=001f8ff0 vaddr=40800000 size=07028h ( 28712) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bb810h (768016) map[0m
+[0;32mI (459) esp_image: segment 3: paddr=002bb838 vaddr=40807028 size=13de4h ( 81380) load[0m
+[0;32mI (495) esp_image: segment 4: paddr=002cf624 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (516) boot: Loaded app from partition at offset 0x1d0000[0m
+[0;32mI (517) boot: Disabling RNG early entropy source...[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (536) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (536) cpu_start: Pro cpu start user code[0m
+[0;32mI (536) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (538) app_init: Application information:[0m
+[0;32mI (542) app_init: Project name:     simple_ota[0m
+[0;32mI (546) app_init: App version:      1[0m
+[0;32mI (549) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (554) app_init: ELF file SHA256:  b87ced263...[0m
+[0;32mI (559) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (563) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (570) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (580) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (586) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (591) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (597) spi_flash: detected chip: gd[0m
+[0;32mI (599) spi_flash: flash io: dio[0m
+[0;33mW (602) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (615) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (621) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (627) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (632) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) simple_ota_example: OTA example app_main start[0m
+[0;32mI (646) simple_ota_example: SHA-256 for bootloader:  df4567f99f0db4d9099d78fcd56f5fe2a6b52e5388b834f21e415457c01612f5[0m
+[0;32mI (736) simple_ota_example: SHA-256 for current firmware:  930c54564b1c2e1fefc7f61b74105f5eee77562515ebc08c8feae3b8c5cf458d[0m
+[0;32mI (736) example_connect: Start example_connect.[0m
+[0;32mI (746) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (746) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (756) wifi:wifi driver task: 4082a414, prio:23, stack:6656, core=0[0m
+[0;32mI (756) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (756) wifi:wifi certification version: v7.0[0m
+[0;32mI (766) wifi:config NVS flash: enabled[0m
+[0;32mI (766) wifi:config nano formatting: disabled[0m
+[0;32mI (776) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (776) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (786) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (786) wifi:Init management short buffer num: 32[0m
+[0;32mI (796) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (796) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (796) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (806) wifi:Init static rx buffer num: 10[0m
+[0;32mI (806) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (816) wifi_init: rx ba win: 6[0m
+[0;32mI (816) wifi_init: accept mbox: 6[0m
+[0;32mI (816) wifi_init: tcpip mbox: 32[0m
+[0;32mI (826) wifi_init: udp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp mbox: 6[0m
+[0;32mI (826) wifi_init: tcp tx win: 5760[0m
+[0;32mI (826) wifi_init: tcp rx win: 5760[0m
+[0;32mI (836) wifi_init: tcp mss: 1440[0m
+[0;32mI (836) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (836) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (846) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (846) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;32mI (896) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;33mW (956) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (956) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (966) wifi:(agc)0x600a7128:0xd21109fa, min.avgNF:0xce->0xd2(dB), RCalCount:0x110, min.RRssi:0x9fa(-96.38)[0m
+[0;32mI (976) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (986) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (986) wifi:enable tsf[0m
+[0;32mI (986) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (996) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1006) example_connect: Waiting for IP(s)[0m
+[0;32mI (3576) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3576) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3576) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3586) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3606) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3606) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3616) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3616) wifi:(trc)phytype:CBW20-SGI, snr:57, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3626) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3636) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:57, ampduState:wait operational[0m
+[0;32mI (3646) wifi:ifidx:0, rssi:-40, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3656) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3816) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3816) wifi:security: WPA2-PSK, phy:bgn, rssi:-40, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3826) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3826) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3836) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3846) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3856) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3866) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3876) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3886) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3916) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3926) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3946) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5736) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7606) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7606) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7606) example_common: Connected to example_netif_sta[0m
+[0;32mI (7616) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7616) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7626) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (7636) simple_ota_example: Starting OTA example task[0m
+[0;32mI (7636) simple_ota_example: Attempting to download update from http://192.168.0.16:3000/api/firmware/latest[0m
+[0;32mI (7646) main_task: Returned from app_main()[0m
+[0;33mW (7746) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (8076) esp_https_ota: Starting OTA...[0m
+[0;32mI (8076) esp_https_ota: Writing to <ota_0> partition at offset 0x20000[0m
+[0;32mI (23946) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (23966) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) [0m
+[0;32mI (23966) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (24056) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) [0m
+[0;32mI (24076) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (24076) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (24096) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) [0m
+[0;32mI (24106) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (24196) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) [0m
+[0;32mI (24206) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (24266) simple_ota_example: OTA Succeed, Rebooting...[0m
+[0;32mI (24266) wifi:state: run -> init (0x0)[0m
+[0;32mI (24266) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (24266) wifi:pm stop, total sleep time: 2710970 us / 20427922 us[0m
+
+[0;32mI (24266) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (24276) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (24286) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (24286) wifi:flush txq[0m
+[0;32mI (24286) wifi:stop sw txq[0m
+[0;32mI (24286) wifi:lmac stop hw txq[0m
+[0;32mI (24296) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (460) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) load[0m
+[0;32mI (496) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (517) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (518) boot: Disabling RNG early entropy source...[0m
+[0;32mI (528) cpu_start: Unicore app[0m
+[0;32mI (537) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (537) cpu_start: Pro cpu start user code[0m
+[0;32mI (537) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (539) app_init: Application information:[0m
+[0;32mI (543) app_init: Project name:     simple_ota[0m
+[0;32mI (547) app_init: App version:      1[0m
+[0;32mI (550) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (556) app_init: ELF file SHA256:  5e6d73acb...[0m
+[0;32mI (560) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (564) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (568) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (571) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (587) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (592) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (598) spi_flash: detected chip: gd[0m
+[0;32mI (601) spi_flash: flash io: dio[0m
+[0;33mW (604) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (616) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (622) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (629) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (633) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (637) main_task: Started on CPU0[0m
+[0;32mI (647) main_task: Calling app_main()[0m
+[0;32mI (647) TACMESH_OTA: ╔═══════════════════════════╗[0m
+[0;32mI (647) TACMESH_OTA: ║  TacMesh OTA Node         ║[0m
+[0;32mI (657) TACMESH_OTA: ║  Versiyon: 1.0.0          ║[0m
+[0;32mI (657) TACMESH_OTA: ║  Cihaz ID: esp32c6-node-01 ║[0m
+[0;32mI (667) TACMESH_OTA: ╚═══════════════════════════╝[0m
+[0;32mI (677) example_connect: Start example_connect.[0m
+[0;32mI (677) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (677) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (697) wifi:wifi driver task: 4082a3b0, prio:23, stack:6656, core=0[0m
+[0;32mI (697) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (697) wifi:wifi certification version: v7.0[0m
+[0;32mI (697) wifi:config NVS flash: enabled[0m
+[0;32mI (697) wifi:config nano formatting: disabled[0m
+[0;32mI (707) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (717) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (717) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (717) wifi:Init management short buffer num: 32[0m
+[0;32mI (727) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (727) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (737) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (737) wifi:Init static rx buffer num: 10[0m
+[0;32mI (747) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (747) wifi_init: rx ba win: 6[0m
+[0;32mI (747) wifi_init: accept mbox: 6[0m
+[0;32mI (757) wifi_init: tcpip mbox: 32[0m
+[0;32mI (757) wifi_init: udp mbox: 6[0m
+[0;32mI (757) wifi_init: tcp mbox: 6[0m
+[0;32mI (757) wifi_init: tcp tx win: 5760[0m
+[0;32mI (767) wifi_init: tcp rx win: 5760[0m
+[0;32mI (767) wifi_init: tcp mss: 1440[0m
+[0;32mI (767) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (777) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (777) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (787) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (827) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (827) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (827) wifi:(agc)0x600a7128:0xd20a9800, min.avgNF:0xce->0xd2(dB), RCalCount:0xa9, min.RRssi:0x800(-128.00)[0m
+[0;32mI (837) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (847) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (847) wifi:enable tsf[0m
+[0;32mI (857) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (857) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (867) example_connect: Waiting for IP(s)[0m
+[0;32mI (3437) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3437) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3447) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3447) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3487) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3487) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3487) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3497) wifi:(trc)phytype:CBW20-SGI, snr:53, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3497) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3507) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:53, ampduState:wait operational[0m
+[0;32mI (3517) wifi:ifidx:0, rssi:-44, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3527) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3687) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3687) wifi:security: WPA2-PSK, phy:bgn, rssi:-44, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3687) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3697) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3707) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3717) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3717) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3737) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3747) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3757) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3787) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3807) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3807) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5677) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8897) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (8897) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (8897) example_common: Connected to example_netif_sta[0m
+[0;32mI (8907) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (8907) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8917) TACMESH_OTA: ✓ WiFi bağlandı[0m
+[0;32mI (8927) TACMESH_OTA: OTA görev başladı. Her 30 saniyede kontrol...[0m
+[0;32mI (8927) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (8937) TACMESH_OTA:  OTA Güncelleme Başlıyor...[0m
+[0;32mI (8947) TACMESH_OTA:  Mevcut versiyon: 1.0.0[0m
+[0;32mI (8947) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (8957) main_task: Returned from app_main()[0m
+[0;33mW (9117) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (9157) TACMESH_OTA: Sunucu versiyonu: 1.0.0[0m
+[0;32mI (9167) TACMESH_OTA: ✓ Firmware güncel, güncelleme gerekmiyor.[0m
+[0;32mI (9167) TACMESH_OTA: Sonraki kontrol: 30 saniye sonra[0m
+[0;32mI (39167) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (39167) TACMESH_OTA:  OTA Güncelleme Başlıyor...[0m
+[0;32mI (39167) TACMESH_OTA:  Mevcut versiyon: 1.0.0[0m
+[0;32mI (39167) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (39207) TACMESH_OTA: Sunucu versiyonu: 1.0.0[0m
+[0;32mI (39207) TACMESH_OTA: ✓ Firmware güncel, güncelleme gerekmiyor.[0m
+[0;32mI (39207) TACMESH_OTA: Sonraki kontrol: 30 saniye sonra[0m
+[0;32mI (69217) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (69217) TACMESH_OTA:  OTA Güncelleme Başlıyor...[0m
+[0;32mI (69217) TACMESH_OTA:  Mevcut versiyon: 1.0.0[0m
+[0;32mI (69217) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (69247) TACMESH_OTA: Sunucu versiyonu: 1.0.0[0m
+[0;32mI (69247) TACMESH_OTA: ✓ Firmware güncel, güncelleme gerekmiyor.[0m
+[0;32mI (69247) TACMESH_OTA: Sonraki kontrol: 30 saniye sonra[0m
+[0;32mI (99257) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (99257) TACMESH_OTA:  OTA Güncelleme Başlıyor...[0m
+[0;32mI (99257) TACMESH_OTA:  Mevcut versiyon: 1.0.0[0m
+[0;32mI (99257) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (99457) TACMESH_OTA: Sunucu versiyonu: 1.0.0[0m
+[0;32mI (99457) TACMESH_OTA: ✓ Firmware güncel, güncelleme gerekmiyor.[0m
+[0;32mI (99457) TACMESH_OTA: Sonraki kontrol: 30 saniye sonra[0m
+[0;32mI (1042657) esp_https_ota: Starting OTA...[0m
+[0;32mI (1042657) esp_https_ota: Writing to <ota_1> partition at offset 0x1d0000[0m
+[0;32mI (1044287) TACMESH_OTA: İndirme: 10% (106496/1064208 bytes)[0m
+[0;32mI (1045637) TACMESH_OTA: İndirme: 20% (212992/1064208 bytes)[0m
+[0;32mI (1047207) TACMESH_OTA: İndirme: 30% (319488/1064208 bytes)[0m
+[0;32mI (1048727) TACMESH_OTA: İndirme: 40% (425984/1064208 bytes)[0m
+[0;32mI (1050267) TACMESH_OTA: İndirme: 50% (532480/1064208 bytes)[0m
+[0;32mI (1051797) TACMESH_OTA: İndirme: 60% (638976/1064208 bytes)[0m
+[0;32mI (1053337) TACMESH_OTA: İndirme: 70% (745472/1064208 bytes)[0m
+[0;32mI (1054887) TACMESH_OTA: İndirme: 80% (851968/1064208 bytes)[0m
+[0;32mI (1056397) TACMESH_OTA: İndirme: 90% (958464/1064208 bytes)[0m
+[0;32mI (1057937) TACMESH_OTA: İndirme: 100% (1064208/1064208 bytes)[0m
+[0;32mI (1057937) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (1057957) esp_image: segment 1: paddr=001f95a8 vaddr=40800000 size=06a70h ( 27248) [0m
+[0;32mI (1057957) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (1058057) esp_image: segment 3: paddr=002bbfbc vaddr=40806a70 size=1439ch ( 82844) [0m
+[0;32mI (1058067) esp_image: segment 4: paddr=002d0360 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (1058067) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (1058097) esp_image: segment 1: paddr=001f95a8 vaddr=40800000 size=06a70h ( 27248) [0m
+[0;32mI (1058097) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (1058197) esp_image: segment 3: paddr=002bbfbc vaddr=40806a70 size=1439ch ( 82844) [0m
+[0;32mI (1058207) esp_image: segment 4: paddr=002d0360 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (1058267) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (1058267) TACMESH_OTA:  ✓ OTA BAŞARILI![0m
+[0;32mI (1058267) TACMESH_OTA:  5 saniye sonra yeniden başlıyor...[0m
+[0;32mI (1058267) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (1058337) TACMESH_OTA: Durum bildirimi gönderildi: ota_success[0m
+[0;32mI (1063337) wifi:state: run -> init (0x0)[0m
+[0;32mI (1063337) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (1063337) wifi:pm stop, total sleep time: 989194973 us / 1059628285 us[0m
+
+[0;32mI (1063337) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (1063337) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1063347) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (1063357) wifi:flush txq[0m
+[0;32mI (1063357) wifi:stop sw txq[0m
+[0;32mI (1063357) wifi:lmac stop hw txq[0m
+[0;32mI (1063367) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=001d0020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=001f95a8 vaddr=40800000 size=06a70h ( 27248) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00200020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (460) esp_image: segment 3: paddr=002bbfbc vaddr=40806a70 size=1439ch ( 82844) load[0m
+[0;32mI (496) esp_image: segment 4: paddr=002d0360 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (517) boot: Loaded app from partition at offset 0x1d0000[0m
+[0;32mI (518) boot: Disabling RNG early entropy source...[0m
+[0;32mI (528) cpu_start: Unicore app[0m
+[0;32mI (537) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (537) cpu_start: Pro cpu start user code[0m
+[0;32mI (537) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (539) app_init: Application information:[0m
+[0;32mI (543) app_init: Project name:     simple_ota[0m
+[0;32mI (547) app_init: App version:      1[0m
+[0;32mI (551) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (556) app_init: ELF file SHA256:  5e6d73acb...[0m
+[0;32mI (560) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (564) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (568) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (572) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (587) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (592) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (598) spi_flash: detected chip: gd[0m
+[0;32mI (601) spi_flash: flash io: dio[0m
+[0;33mW (604) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (616) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (622) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (629) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (633) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (637) main_task: Started on CPU0[0m
+[0;32mI (647) main_task: Calling app_main()[0m
+[0;32mI (647) TACMESH_OTA: ╔═══════════════════════════╗[0m
+[0;32mI (647) TACMESH_OTA: ║  TacMesh OTA Node         ║[0m
+[0;32mI (657) TACMESH_OTA: ║  Versiyon: 1.0.0          ║[0m
+[0;32mI (657) TACMESH_OTA: ║  Cihaz ID: esp32c6-node-01 ║[0m
+[0;32mI (667) TACMESH_OTA: ╚═══════════════════════════╝[0m
+[0;32mI (677) example_connect: Start example_connect.[0m
+[0;32mI (677) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (677) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (697) wifi:wifi driver task: 4082a3b0, prio:23, stack:6656, core=0[0m
+[0;32mI (697) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (697) wifi:wifi certification version: v7.0[0m
+[0;32mI (697) wifi:config NVS flash: enabled[0m
+[0;32mI (697) wifi:config nano formatting: disabled[0m
+[0;32mI (707) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (717) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (717) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (717) wifi:Init management short buffer num: 32[0m
+[0;32mI (727) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (727) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (737) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (737) wifi:Init static rx buffer num: 10[0m
+[0;32mI (747) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (747) wifi_init: rx ba win: 6[0m
+[0;32mI (747) wifi_init: accept mbox: 6[0m
+[0;32mI (757) wifi_init: tcpip mbox: 32[0m
+[0;32mI (757) wifi_init: udp mbox: 6[0m
+[0;32mI (757) wifi_init: tcp mbox: 6[0m
+[0;32mI (757) wifi_init: tcp tx win: 5760[0m
+[0;32mI (767) wifi_init: tcp rx win: 5760[0m
+[0;32mI (767) wifi_init: tcp mss: 1440[0m
+[0;32mI (767) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (777) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (777) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (787) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (827) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (827) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (827) wifi:(agc)0x600a7128:0xd2054a12, min.avgNF:0xce->0xd2(dB), RCalCount:0x54, min.RRssi:0xa12(-94.88)[0m
+[0;32mI (837) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (847) wifi:mode : sta (60:55:f9:f6:9f:cc)[0m
+[0;32mI (847) wifi:enable tsf[0m
+[0;32mI (857) example_connect: Connecting to TURKSAT-KABLONET-7E1E-2.4G_EXT...[0m
+[0;33mW (857) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (867) example_connect: Waiting for IP(s)[0m
+[0;32mI (3437) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3437) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (3447) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3447) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3477) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3477) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3487) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3487) wifi:(trc)phytype:CBW20-SGI, snr:52, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3497) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3497) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:52, ampduState:wait operational[0m
+[0;32mI (3517) wifi:ifidx:0, rssi:-45, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3527) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (3677) wifi:connected with TURKSAT-KABLONET-7E1E-2.4G_EXT, aid = 7, channel 11, BW20, bssid = d8:47:32:b7:43:17[0m
+[0;32mI (3677) wifi:security: WPA2-PSK, phy:bgn, rssi:-45, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (3687) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3687) wifi:pm start, type:1, aid:0x7, trans-BSSID:d8:47:32:b7:43:17, BSSID[5]:0x17, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3707) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3707) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3717) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3727) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3737) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3747) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3787) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3797) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3807) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5677) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7507) esp_netif_handlers: example_netif_sta ip: 192.168.0.40, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (7507) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.40[0m
+[0;32mI (7507) example_common: Connected to example_netif_sta[0m
+[0;32mI (7517) example_common: - IPv4 address: 192.168.0.40,[0m
+[0;32mI (7517) example_common: - IPv6 address: fe80:0000:0000:0000:6255:f9ff:fef6:9fcc, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7527) TACMESH_OTA: ✓ WiFi bağlandı[0m
+[0;32mI (7537) TACMESH_OTA: OTA görev başladı. Her 30 saniyede kontrol...[0m
+[0;32mI (7537) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (7547) TACMESH_OTA:  OTA Güncelleme Başlıyor...[0m
+[0;32mI (7557) TACMESH_OTA:  Mevcut versiyon: 1.0.0[0m
+[0;32mI (7557) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (7567) main_task: Returned from app_main()[0m
+[0;33mW (7677) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001743, TALO:0xb73247d8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (7707) TACMESH_OTA: Sunucu versiyonu: 1.0.0[0m
+[0;32mI (7707) TACMESH_OTA: ✓ Firmware güncel, güncelleme gerekmiyor.[0m
+[0;32mI (7707) TACMESH_OTA: Sonraki kontrol: 30 saniye sonra[0m
+[0;32mI (932037) TACMESH_OTA: Durum bildirimi gönderildi: ota_start[0m
+[0;32mI (932067) esp_https_ota: Starting OTA...[0m
+[0;32mI (932067) esp_https_ota: Writing to <ota_0> partition at offset 0x20000[0m
+[0;32mI (933637) TACMESH_OTA: İndirme: 10% (106496/1064208 bytes)[0m
+[0;32mI (935217) TACMESH_OTA: İndirme: 20% (212992/1064208 bytes)[0m
+[0;32mI (936827) TACMESH_OTA: İndirme: 30% (319488/1064208 bytes)[0m
+[0;32mI (938417) TACMESH_OTA: İndirme: 40% (425984/1064208 bytes)[0m
+[0;32mI (940027) TACMESH_OTA: İndirme: 50% (532480/1064208 bytes)[0m
+[0;32mI (941587) TACMESH_OTA: İndirme: 60% (638976/1064208 bytes)[0m
+[0;32mI (943207) TACMESH_OTA: İndirme: 70% (745472/1064208 bytes)[0m
+[0;32mI (944807) TACMESH_OTA: İndirme: 80% (851968/1064208 bytes)[0m
+[0;32mI (946277) TACMESH_OTA: İndirme: 90% (958464/1064208 bytes)[0m
+[0;32mI (947597) TACMESH_OTA: İndirme: 100% (1064208/1064208 bytes)[0m
+[0;32mI (947597) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (947617) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) [0m
+[0;32mI (947617) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (947717) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) [0m
+[0;32mI (947727) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (947727) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (947757) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) [0m
+[0;32mI (947757) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (947857) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) [0m
+[0;32mI (947867) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) [0m
+[0;32mI (947917) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (947917) TACMESH_OTA:  ✓ OTA BAŞARILI![0m
+[0;32mI (947917) TACMESH_OTA:  5 saniye sonra yeniden başlıyor...[0m
+[0;32mI (947917) TACMESH_OTA: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;32mI (947957) TACMESH_OTA: Durum bildirimi gönderildi: ota_success[0m
+[0;32mI (952967) wifi:state: run -> init (0x0)[0m
+[0;32mI (952967) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (952967) wifi:pm stop, total sleep time: 881857441 us / 949260775 us[0m
+
+[0;32mI (952967) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (952967) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (952977) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (952987) wifi:flush txq[0m
+[0;32mI (952987) wifi:stop sw txq[0m
+[0;32mI (952987) wifi:lmac stop hw txq[0m
+[0;32mI (952987) wifi:Deinit lldesc rx mblock:10[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16f4
+load:0x4086b910,len:0xed0
+load:0x4086e610,len:0x3198
+entry 0x4086b91a
+[0;32mI (26) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 10 2026 03:08:48[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (29) boot: efuse block revision: v0.0[0m
+[0;32mI (30) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (68) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (81) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00020020 vaddr=420c0020 size=29580h (169344) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=000495a8 vaddr=40800000 size=06a70h ( 27248) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bbf94h (769940) map[0m
+[0;32mI (460) esp_image: segment 3: paddr=0010bfbc vaddr=40806a70 size=1439ch ( 82844) load[0m
+[0;32mI (496) esp_image: segment 4: paddr=00120360 vaddr=4081ae10 size=03984h ( 14724) load[0m
+[0;32mI (517) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (518) boot: Disabling RNG early entropy source...[0m
+[0;32mI (528) cpu_start: Unicore app[0m
+[0;32mI (537) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (537) cpu_start: Pro cpu start user code[0m
+[0;32mI (537) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (539) app_init: Application information:[0m
+[0;32mI (543) app_init: Project name:     simple_ota[0m
+[0;32mI (547) app_init: App version:      1[0m
+[0;32mI (550) app_init: Compile time:     Mar 10 2026 03:08:40[0m
+[0;32mI (556) app_init: ELF file SHA256:  5e6d73acb...[0m
+[0;32mI (560) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (564) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (567) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (571) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 408241F0 len 00058420 (353 KiB): RAM[0m
+[0;32mI (587) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (592) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (598) spi_flash: detected chip: gd[0m
+[0;32mI (601) spi_flash: flash io: dio[0m
+[0;33mW (604) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (616) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (622) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (629) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (633) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (637) main_task: Started on CPU0[0m
+[0;32mI (647) main_task: Calling app_main()[0m
+[0;32mI (647) TACMESH_OTA: ╔═══════════════════════════╗[0m
+[0;32mI (647) TACMESH_OTA: ║  TacMesh OTA Node         ║[0m
+[0;32mI (657) TACMESH_OTA: ║  Versiyon: 1.0.0          ║[0m
+[0;32mI (657) TACMESH_OTA: ║  Cihaz ID: esp32c6-node-01 ║[0m
+[0;32mI (667) TACMESH_OTA: ╚═══════════════════════════╝[0m
+[0;32mI (677) example_connect: Start example_connect.[0m
+[0;32mI (677) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (677) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (697) wifi:wifi driver task: 4082a3b0, prio:23, stack:6656, core=0[0m
+[0;32mI (697) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (697) wifi:wifi certification version: v7.0[0m
+[0;32mI (697) wifi:config NVS flash: enabled[0m
+[0;32mI (697) wifi:config nano formatting: disabled[0m
+[0;32mI (707) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (717) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (717) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (717) wifi:Init management short buffer num: 32[0m
+[0;32mI (727) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (727) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (737) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (737) wifi:Init static

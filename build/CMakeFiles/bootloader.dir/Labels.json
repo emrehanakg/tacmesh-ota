@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/akgun/esp/ota_project/simple_ota_example/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

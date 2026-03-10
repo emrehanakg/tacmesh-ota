@@ -1,0 +1,64 @@
+Command: ninja app-flash
+[1/2] cd /Users/akgun/esp/ota_project/simple_ota_example/build/esp-idf/esptool_py && /Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/akgun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/akgun/esp/ota_project/simple_ota_example/build/partition_table/partition-table.bin /Users/akgun/esp/ota_project/simple_ota_example/build/simple_ota.bin
+simple_ota.bin binary size 0xfebe0 bytes. Smallest app partition is 0x1a9000 bytes. 0xaa420 bytes (40%) free.
+[1/2] cd /Users/akgun/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/akgun/esp/esp-idf -D "SERIAL_TOOL=/Users/akgun/.espressif/python_env/idf5.5_py3.14_env/bin/python;;/Users/akgun/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@app-flash_args" -D WORKING_DIRECTORY=/Users/akgun/esp/ota_project/simple_ota_example/build -P /Users/akgun/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/cu.usbserial-10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x20000 simple_ota.bin
+esptool.py v4.12.dev1
+Serial port /dev/cu.usbserial-10
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.0)
+Features: Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz, Unknown Embedded Flash
+Crystal is 40MHz
+MAC: 60:55:f9:00:00:f6:9f:cc
+BASE MAC: 60:55:f9:f6:9f:cc
+MAC_EXT: 00:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00020000 to 0x0011efff...
+Compressed 1043424 bytes to 600362...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002c4c9... (5 %)
+Writing at 0x00038036... (8 %)
+Writing at 0x00040f96... (10 %)
+Writing at 0x00048c88... (13 %)
+Writing at 0x0004faae... (16 %)
+Writing at 0x00056e18... (18 %)
+Writing at 0x0005e7c8... (21 %)
+Writing at 0x00065825... (24 %)
+Writing at 0x0006c852... (27 %)
+Writing at 0x000734ac... (29 %)
+Writing at 0x00079c33... (32 %)
+Writing at 0x000803f3... (35 %)
+Writing at 0x00087094... (37 %)
+Writing at 0x0008ccaf... (40 %)
+Writing at 0x00092b77... (43 %)
+Writing at 0x00099350... (45 %)
+Writing at 0x0009f42e... (48 %)
+Writing at 0x000a530c... (51 %)
+Writing at 0x000ab3c2... (54 %)
+Writing at 0x000b134a... (56 %)
+Writing at 0x000b72ff... (59 %)
+Writing at 0x000bdff1... (62 %)
+Writing at 0x000c4ebb... (64 %)
+Writing at 0x000cbe38... (67 %)
+Writing at 0x000d2f24... (70 %)
+Writing at 0x000da8d7... (72 %)
+Writing at 0x000e0f66... (75 %)
+Writing at 0x000e71c8... (78 %)
+Writing at 0x000ed792... (81 %)
+Writing at 0x000f3d32... (83 %)
+Writing at 0x000fa416... (86 %)
+Writing at 0x001001c1... (89 %)
+Writing at 0x001065f4... (91 %)
+Writing at 0x0010d1e4... (94 %)
+Writing at 0x00112c02... (97 %)
+Writing at 0x00118a6e... (100 %)
+Wrote 1043424 bytes (600362 compressed) at 0x00020000 in 15.7 seconds (effective 530.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
