@@ -1,7 +1,7 @@
 # TacMesh OTA System
 
 ESP32-C6 üzerinde çalışan WiFi tabanlı OTA (Over-The-Air) güncelleme sistemi.
-nano ~/esp/ota_project/simple_ota_example/README.md
+![TacMesh OTA System](images/tacmesh.png)
 ## Özellikler
 - Otomatik firmware güncelleme (30 saniyede bir kontrol)
 - Versiyon kontrolü (aynı versiyonu tekrar indirmiyor)
