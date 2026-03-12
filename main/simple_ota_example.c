@@ -13,7 +13,7 @@
 #include "protocol_examples_common.h"
 
 // ── Ayarlar ─────────────────────────────────────────
-#define OTA_SERVER_IP       "192.168.0.16"
+#define OTA_SERVER_IP       "YOUR_SERVER_IP"
 #define OTA_SERVER_PORT     3000
 #define OTA_CHECK_INTERVAL  30   // saniye
 #define DEVICE_ID           "esp32c6-node-01"

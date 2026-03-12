@@ -1,0 +1,13 @@
+# Build dosyaları
+build/
+
+# Hassas bilgiler
+sdkconfig
+sdkconfig.old
+
+# Server veritabanı
+server/db.json
+server/firmwares/
+
+# Node modules
+server/node_modules/
