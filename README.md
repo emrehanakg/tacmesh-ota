@@ -27,7 +27,7 @@ Dashboard: http://localhost:3000
 ### 2. Firmware Ayarları
 `main/simple_ota_example.c` dosyasında:
 ```c
-#define OTA_SERVER_IP    "192.168.0.16"  // Mac IP'n
+#define OTA_SERVER_IP    "YOUR_SERVER_IP"  // 
 #define FIRMWARE_VERSION "1.0.0"         // Mevcut versiyon
 #define DEVICE_ID        "esp32c6-node-01"
 ```
